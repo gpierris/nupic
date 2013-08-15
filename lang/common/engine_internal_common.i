@@ -68,8 +68,10 @@
 // For Network::get/setPhases()
 %template(UInt32Set) std::set<nta::UInt32>;
 
-
+#ifndef NTA_PLATFORM_linux32
 %template(Dimset) std::vector<size_t>;
+#endif
+
 %include <nta/ntypes/Dimensions.hpp>
 %include <nta/ntypes/Array.hpp>
 %include <nta/ntypes/ArrayRef.hpp>
